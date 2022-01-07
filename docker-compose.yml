@@ -1,0 +1,62 @@
+###############################################################################
+#                          Generated on phpdocker.io                          #
+###############################################################################
+version: "3.5"
+services:
+
+    mysql:
+      image: mysql:8.0
+      container_name: cryptokart-mysql
+      command: --default-authentication-plugin=mysql_native_password
+      working_dir: /application
+      volumes:
+        - .:/application
+      environment:
+        - MYSQL_ROOT_PASSWORD=maQi7AuEGePBLjox
+        - MYSQL_DATABASE=cryptokart
+        - MYSQL_USER=web
+        - MYSQL_PASSWORD=xE8$gu==>qFtkzHP
+      restart: always
+
+    webserver:
+      image: nginx:alpine
+      container_name: cryptokart-webserver
+      working_dir: /application
+      volumes:
+          - .:/application
+          - ./phpdocker/nginx/nginx.conf:/etc/nginx/conf.d/default.conf
+      ports:
+       - "2229:80"
+      environment:
+        - VIRTUAL_HOST=cryptokart.foncifonce.com
+      restart: always
+
+    php-fpm:
+      build: phpdocker/php-fpm
+      container_name: cryptokart-php-fpm
+      working_dir: /application
+      volumes:
+        - .:/application
+        - ./phpdocker/php-fpm/php-ini-overrides.ini:/usr/local/etc/php/conf.d/99-overrides.ini
+      tty: true
+      stdin_open: true
+      ports:
+        - "9009:9000"
+      restart: always
+
+    phpmyadmin:
+      image: phpmyadmin/phpmyadmin
+      container_name: cryptokart-phpMyAdmin
+      ports:
+        - "8089:80"
+      environment:
+        - "PMA_HOST=cryptokart-mysql"
+        - PMA_PORT=3306
+        - PHP_UPLOAD_MAX_FILESIZE=500MB
+      links:
+        - mysql:db
+      restart: always
+
+networks:
+  default:
+    name: mynetwork

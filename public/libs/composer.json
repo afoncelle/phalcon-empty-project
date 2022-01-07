@@ -1,0 +1,8 @@
+{
+    "require": {
+        "components/jquery": "3.5.1",
+        "components/jqueryui": "^1.11",
+        "twbs/bootstrap": "4.5.3",
+        "enyo/dropzone": "^5.7.6"
+    }
+}

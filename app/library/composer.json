@@ -1,0 +1,19 @@
+{
+    "config": {
+        "bin-dir": "bin"
+    },
+    "autoload-dev": {
+      "psr-4": {
+        "Tests\\": "tests"
+      }
+    },
+    "require": {
+        "robmorgan/phinx": "^0.12.4",
+        "mobiledetect/mobiledetectlib": "^2.8",
+        "guzzlehttp/guzzle": "^7.0",
+        "netresearch/jsonmapper": "^4.0",
+        "swiftmailer/swiftmailer": "^6.0",
+        "google/recaptcha": "^1.2",
+        "phalcon/incubator-logger": "^1.0"
+    }
+}
