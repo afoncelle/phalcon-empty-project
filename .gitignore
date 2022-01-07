@@ -1,2 +1,5 @@
-/cache/
-/config/development/
+cache/*
+.idea
+app/library/bin/*
+app/library/vendor/*
+public/libs/vendor/*
