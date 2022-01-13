@@ -1,12 +1,12 @@
 <?php
 
-namespace Cryptokart\Open\Controllers;
+namespace Projectname\Open\Controllers;
 
 use Phalcon\Mvc\View;
-use Cryptokart\Controllers\ControllerBase;
+use Projectname\Controllers\ControllerBase;
 
 /*
- * Copyright(C) CryptoKart from 2022 to present
+ * Copyright(C) Projectname from 2022 to present
  * All rights reserved
  * @author afoncelle
  */

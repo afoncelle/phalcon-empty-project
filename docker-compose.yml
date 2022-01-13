@@ -6,21 +6,21 @@ services:
 
     mysql:
       image: mysql:8.0
-      container_name: cryptokart-mysql
+      container_name: @todo-projectname-mysql
       command: --default-authentication-plugin=mysql_native_password
       working_dir: /application
       volumes:
         - .:/application
       environment:
-        - MYSQL_ROOT_PASSWORD=maQi7AuEGePBLjox
-        - MYSQL_DATABASE=cryptokart
+        - MYSQL_ROOT_PASSWORD=maQi7AuEGePBLjoxsdqfc
+        - MYSQL_DATABASE=@todo-projectname
         - MYSQL_USER=web
-        - MYSQL_PASSWORD=xE8$gu==>qFtkzHP
+        - "MYSQL_PASSWORD:xE8$gu==>qFtkzHP"
       restart: always
 
     webserver:
       image: nginx:alpine
-      container_name: cryptokart-webserver
+      container_name: @todo-projectname-webserver
       working_dir: /application
       volumes:
           - .:/application
@@ -28,12 +28,12 @@ services:
       ports:
        - "2229:80"
       environment:
-        - VIRTUAL_HOST=cryptokart.foncifonce.com
+        - VIRTUAL_HOST=@todo-projectname.foncifonce.com
       restart: always
 
     php-fpm:
       build: phpdocker/php-fpm
-      container_name: cryptokart-php-fpm
+      container_name: @todo-projectname-php-fpm
       working_dir: /application
       volumes:
         - .:/application
@@ -46,11 +46,11 @@ services:
 
     phpmyadmin:
       image: phpmyadmin/phpmyadmin
-      container_name: cryptokart-phpMyAdmin
+      container_name: @todo-projectname-phpMyAdmin
       ports:
         - "8089:80"
       environment:
-        - "PMA_HOST=cryptokart-mysql"
+        - "PMA_HOST=@todo-projectname-mysql"
         - PMA_PORT=3306
         - PHP_UPLOAD_MAX_FILESIZE=500MB
       links:

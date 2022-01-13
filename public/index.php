@@ -21,13 +21,14 @@ try {
     $hostname = $_SERVER["HTTP_HOST"];
 
     switch ($hostname){
-        case 'cryptokart.io' :
-        case 'www.cryptokart.io' :
+        case '@todo-projectname.io' :
+        case 'www.@todo-projectname.io' :
             $env = 'prod';
             $protocol = 'https';
             error_reporting(0);
             break;
-        case 'devadri.cryptokart.io' :
+        case 'devadri.@todo-projectname.io' :
+        case 'localhost:2229' :
             $env = 'dev';
             $protocol = 'http';
             error_reporting(E_ALL);
@@ -67,7 +68,7 @@ try {
     $application->registerModules(
         [
             'public'  => [
-                'className' => 'Cryptokart\Open\Module',
+                'className' => 'Projectname\Open\Module',
                 'path'      => '../app/modules/public/Module.php',
             ],
         ]
@@ -79,11 +80,11 @@ try {
     $error = $e->getMessage() . "\r\n\r\n"
            . $e->getTraceAsString(). "\r\n\r\n"
            . print_r(array_intersect_key($_SERVER, array_flip(['REQUEST_URI', 'HTTP_USER_AGENT', 'HTTP_X_FORWARDED_FOR', 'HTTP_HOST', 'HTTP_X_REAL_IP', 'REDIRECT_STATUS', 'REMOTE_ADDR', 'SERVER_ADDR', 'argv', 'argc'])),true);
-    $message = (new Swift_Message('[' . ENV . '] EL ERROR - ' . $e->getMessage()))
-        ->setFrom(['postmaster@cryptokart.io' => 'Earth Legacy'])
-        ->setTo(['postmaster@cryptokart.io'])
+    $message = (new Swift_Message('[' . ENV . '] SITE ERROR - ' . $e->getMessage()))
+        ->setFrom(['postmaster@@todo-projectname.io' => 'Projectname'])
+        ->setTo(['postmaster@@todo-projectname.io'])
         ->setBody($error);
-    $di->get('mailer')->send($message);
+//    $di->get('mailer')->send($message);
 
     throw $e;
 }

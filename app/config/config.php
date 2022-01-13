@@ -16,10 +16,10 @@ $config = [
 return new Config([
     'database' => [
         'adapter'     => 'Mysql',
-        'host'        => 'cryptokart-mysql',
+        'host'        => '@todo-projectname-mysql',
         'username'    => 'web',
         'password'    => 'xE8$gu==>qFtkzHP',
-        'dbname'      => 'cryptokart',
+        'dbname'      => '@todo-projectname',
         'charset'     => 'utf8',
     ],
     'application' => [

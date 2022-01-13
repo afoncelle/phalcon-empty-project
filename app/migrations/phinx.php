@@ -12,8 +12,8 @@ return
 
             'prod' => [
                 'adapter' => 'mysql',
-                'host' => 'cryptokart-mysql',
-                'name' => "cryptokart",
+                'host' => '@todo-projectname-mysql',
+                'name' => "@todo-projectname",
                 'user' => 'web',
                 'pass' => 'xE8$gu==>qFtkzHP',
                 'port' => '3306',
@@ -21,8 +21,8 @@ return
 
             'dev' => [
                 'adapter' => 'mysql',
-                'host' => 'cryptokart-mysql',
-                'name' => "cryptokart",
+                'host' => '@todo-projectname-mysql',
+                'name' => "@todo-projectname",
                 'user' => 'web',
                 'pass' => 'xE8$gu==>qFtkzHP',
                 'port' => '3306',

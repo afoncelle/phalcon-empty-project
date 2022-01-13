@@ -1,6 +1,6 @@
 <?php
 
-namespace Cryptokart\Enums;
+namespace Projectname\Enums;
 
 class UploadErrorsEnum
 {

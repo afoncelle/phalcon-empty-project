@@ -116,7 +116,7 @@
                                                 <table width="100%" class="center" cellpadding="0" cellspacing="0">
                                                     <tr>
                                                         <td data-color="text" data-size="size navigation" data-min="10" data-max="22" data-link-style="text-decoration:none; color:#F7F7F7;" class="" align="center" valign="middle" style="font:bold 13px/15px Arial, Helvetica, sans-serif; color:#F7F7F7;">
-                                                            <a target="_blank" style="text-decoration:none; color:#F7F7F7;" href="{{ sitebaseurl }}/">Cryptokart</a> &nbsp; &nbsp; <a target="_blank" style="text-decoration:none; color:#F7F7F7;" href="{{ sitebaseurl }}/project">Project</a> &nbsp; &nbsp; <a target="_blank" style="text-decoration:none; color:#F7F7F7;" href="{{ sitebaseurl }}/contribute">Contribute</a>
+                                                            <a target="_blank" style="text-decoration:none; color:#F7F7F7;" href="{{ sitebaseurl }}/">Projectname</a> &nbsp; &nbsp; <a target="_blank" style="text-decoration:none; color:#F7F7F7;" href="{{ sitebaseurl }}/project">Project</a> &nbsp; &nbsp; <a target="_blank" style="text-decoration:none; color:#F7F7F7;" href="{{ sitebaseurl }}/contribute">Contribute</a>
                                                         </td>
                                                     </tr>
                                                 </table>
@@ -155,7 +155,7 @@
                                                 <table width="134" align="center" style="margin:0 auto;" cellpadding="0" cellspacing="0">
                                                     <tr>
                                                         <td data-bgcolor="bg-button" data-size="size button" data-min="10" data-max="16" class="btn" align="center" style="font:12px/14px Arial, Helvetica, sans-serif; color:black; border-radius: 8px;font-weight: 700;text-transform:uppercase; mso-padding-alt:12px 10px 10px; " bgcolor="#4fffff">
-                                                            <a target="_blank" style="text-decoration:none; color:black; font-weight: 700;display:block;border-radius: 8px; padding:12px 10px 10px;" href="{{ sitebaseurl }}">Go to Cryptokart</a>
+                                                            <a target="_blank" style="text-decoration:none; color:black; font-weight: 700;display:block;border-radius: 8px; padding:12px 10px 10px;" href="{{ sitebaseurl }}">Go to Projectname</a>
                                                         </td>
                                                     </tr>
                                                 </table>

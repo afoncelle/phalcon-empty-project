@@ -1,7 +1,7 @@
 <?php
 
 
-namespace Cryptokart\Open;
+namespace Projectname\Open;
 
 use Phalcon\Loader;
 use Phalcon\Mvc\View;
@@ -20,13 +20,13 @@ class Module
 
         $loader->registerNamespaces(
             [
-                'Cryptokart\Controllers'       => '../app/modules/base/controllers/',
-                'Cryptokart\Models'            => '../app/modules/base/models/',
-                'Cryptokart\Services'          => '../app/modules/base/services/',
-                'Cryptokart\Repositories'      => '../app/modules/base/repositories/',
-                'Cryptokart\Enums'             => '../app/modules/base/enums/',
-                'Cryptokart\Open\Controllers'  => '../app/modules/public/controllers/',
-                'Cryptokart\Open\Models'       => '../app/modules/public/models/',
+                'Projectname\Controllers'       => '../app/modules/base/controllers/',
+                'Projectname\Models'            => '../app/modules/base/models/',
+                'Projectname\Services'          => '../app/modules/base/services/',
+                'Projectname\Repositories'      => '../app/modules/base/repositories/',
+                'Projectname\Enums'             => '../app/modules/base/enums/',
+                'Projectname\Open\Controllers'  => '../app/modules/public/controllers/',
+                'Projectname\Open\Models'       => '../app/modules/public/models/',
             ]
         );
 
@@ -44,7 +44,7 @@ class Module
             function () {
                 $dispatcher = new Dispatcher();
 
-                $dispatcher->setDefaultNamespace('Cryptokart\Open\Controllers');
+                $dispatcher->setDefaultNamespace('Projectname\Open\Controllers');
 
                 return $dispatcher;
             }

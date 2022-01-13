@@ -1,14 +1,14 @@
 <?php
 declare(strict_types=1);
 
-namespace Cryptokart\Controllers;
+namespace Projectname\Controllers;
 
-use Cryptokart\Models\User;
+use Projectname\Models\User;
 use Phalcon\Di;
 use Phalcon\Mvc\Controller;
 use Phalcon\Mvc\Dispatcher;
-use Cryptokart\Repositories\UserRepository;
-use Cryptokart\Services\SessionService;
+use Projectname\Repositories\UserRepository;
+use Projectname\Services\SessionService;
 
 abstract class ControllerBase extends Controller
 {

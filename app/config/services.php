@@ -179,7 +179,7 @@ $di->setShared('session', function () {
 $di->setShared('mailer', function(): Swift_Mailer {
 // Create the Transport
     $transport = (new Swift_SmtpTransport('ssl0.ovh.net', 465, 'ssl'))
-        ->setUsername('contact@cryptokart.io')
+        ->setUsername('contact@@todo-projectname.io')
         ->setPassword('nftrocket@2021!');
 
     return new Swift_Mailer($transport);
